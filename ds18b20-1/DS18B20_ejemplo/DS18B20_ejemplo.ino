@@ -1,0 +1,40 @@
+ // Sensor temperatura DS18B20
+
+   // Conectamos el sensor de la siguiente forma:
+   // GND -> GND
+   // VCC -> 5V
+   // DQ  -> D2
+  
+   // Librerias necesarias
+   #include <OneWire.h>
+   #include <DallasTemperature.h>
+
+
+   // Direcciones de los sensores de temperatura
+       DeviceAddress Temperatura1;
+
+   // Temperatura
+   int DS18S20_Pin = 2; 
+       //Pin de entrada donde conectamos el sensor
+   OneWire ds(DS18S20_Pin); 
+   DallasTemperature sensors(&ds);
+   float TemperaturaA;
+
+
+   void setup(){
+     Serial.begin(9600);
+     // Buscamos el sensor,
+     sensors.begin();
+   }
+
+   void loop(){
+     sensors.requestTemperatures();
+     TemperaturaA = sensors.getTempCByIndex(0);
+     Serial.print ("Temperatura: ");
+     Serial.print (TemperaturaA);
+     Serial.println (" C");
+     delay (1000);
+   }
+
+
+

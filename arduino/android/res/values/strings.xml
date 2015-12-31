@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="txt1">Pulse el botón para escanear dispositivos bluetooth</string>
+    <string name="app_name">Domotica</string>
+    <string name="bt_connected">Bluetooth conectado</string>
+    <string name="bt_disconnected">Bluetooth NO conectado</string>
+    <string name="scanning">... escaneando ...</string>
+    <string name="scan">Escanear</string>
+    <string name="writeACommand">Escriba un comando para enviar a la placa</string>
+
+</resources>
